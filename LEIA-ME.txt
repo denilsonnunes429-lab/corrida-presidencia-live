@@ -1,0 +1,19 @@
+CORRIDA DA PRESIDÊNCIA - SERVIDOR DE TESTE PARA RENDER
+
+1. Pelo navegador do Android, crie um repositório no GitHub.
+2. Envie os arquivos deste pacote, mantendo public/index.html dentro da pasta public.
+3. No Render, New > Web Service > conecte o repositório.
+4. Runtime Node, Build Command: npm install, Start Command: npm start.
+5. Aguarde o deploy e abra a URL HTTPS do Render no Chrome.
+6. Inicie a LIVE da conta @denilsonnunesss e compartilhe a tela do jogo.
+7. O status do jogo indica se a conexão com a LIVE foi estabelecida.
+
+AVISOS IMPORTANTES
+- O TikTok LIVE Connector não é oficial e pode falhar por mudanças no TikTok.
+- O serviço Render gratuito pode dormir quando não usado, causando interrupções.
+- O presente TikTok deve aparecer com o nome exato TikTok nos eventos. Confira na LIVE.
+- O servidor tenta se reconectar, mas NÃO há garantia de funcionamento contínuo.
+- Não precisa fornecer senha TikTok ao jogo.
+- Botões de teste permanecem ativos; não os pressione durante a LIVE.
+- A imagem de fundo é fixa; os personagens não caminham de verdade.
+- Teste primeiro em LIVE curta antes de depender do sistema.
