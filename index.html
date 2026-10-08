@@ -13,4 +13,11 @@ const source = new EventSource('/events');
 source.onmessage = event => {try { const d=JSON.parse(event.data); if(d.type==='status') { $('liveState').textContent=d.connected?'🟢 Conectado à LIVE @'+d.username:'🟠 Aguardando LIVE @'+d.username+(d.error?' — '+d.error:''); } else if(d.type==='gift') { $('name').value=d.name; gift(d.side,d.count,d.side==='L'?'tiktok':'rosa'); } } catch(e){console.error(e)} };
 source.onerror = () => { $('liveState').textContent='🔴 Sem conexão com o servidor; tentando novamente...'; };
 
-</script></body></html>
+</script></body></html><style>
+body:has(.stage) { margin: 0; }
+@media (max-width: 600px) {
+  header, .panel, .extras, .controls { display: none !important; }
+  .stage { width: 100vw !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  .scene { display: block; width: 100%; height: auto; }
+}
+</style>
