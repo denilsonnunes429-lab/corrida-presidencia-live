@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: corrida-presidencia-live
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TIKTOK_USERNAME
+        value: denilsonnunesss
