@@ -9,6 +9,11 @@ function status() { return { type:'status', connected, username, error:lastError
 app.get('/events',(req,res)=>{res.setHeader('Content-Type','text/event-stream');res.setHeader('Cache-Control','no-cache, no-transform');res.setHeader('Connection','keep-alive');res.flushHeaders();clients.add(res);res.write(`data: ${JSON.stringify(status())}\n\n`);req.on('close',()=>clients.delete(res));});
 app.get('/health',(req,res)=>res.json(status()));
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root: __dirname });
+});
+  
 function scheduleRetry(){clearTimeout(retry);retry=setTimeout(connect,30000);}
 async function connect(){if(connecting)return;connecting=true;try{
  connection = new WebcastPushConnection(username, { enableExtendedGiftInfo:true });
