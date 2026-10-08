@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   
 function scheduleRetry(){clearTimeout(retry);retry=setTimeout(connect,30000);}
 async function connect(){if(connecting)return;connecting=true;try{
- connection = new WebcastPushConnection(username, { enableExtendedGiftInfo:true });
+  connection = new WebcastPushConnection(username);
  connection.on('gift', data=>{
   // TikTok streaks produce intermediate events; only count the final count once.
   if(data.giftType === 1 && !data.repeatEnd)return;
