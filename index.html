@@ -20,4 +20,29 @@ body:has(.stage) { margin: 0; }
   .stage { width: 100vw !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
   .scene { display: block; width: 100%; height: auto; }
 }
+</style><style>
+@media (max-width: 600px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .stage {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    max-width: none !important;
+    overflow: hidden !important;
+  }
+
+  .scene {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}
 </style>
