@@ -1,5 +1,5 @@
 const express = require('express');
-const { WebcastPushConnection } = require('tiktok-live-connector');
+const { TikTokLiveConnection: WebcastPushConnection } = require('tiktok-live-connector');
 const app = express();
 const username = (process.env.TIKTOK_USERNAME || 'denilsonnunesss').replace(/^@/, '');
 const clients = new Set();
